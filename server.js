@@ -1,7 +1,8 @@
 // Import Fastify
 const fastify = require("fastify")({ logger: true });
 const fetch = require('node-fetch');
-
+const cardTypes = require('./cardTypes.json');
+const cards = require('./cards.json');
 // Declare a route
 fastify.get("/", async (request, reply) => {
   return { hello: "world" };
@@ -22,6 +23,7 @@ fastify.get("/:room_id", async (request, reply) => {
     }
     const jsonData = await response.json();
     const updatedDeck = JSON.parse(JSON.stringify(jsonData));
+    updatedDeck['playerDeck1']['cardTypes'] = cardTypes
     
     // Send the JSON data as response
     return jsonData;

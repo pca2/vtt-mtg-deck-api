@@ -1,0 +1,74 @@
+{
+  "Swamp": {
+    "label": "Swamp",
+    "image": "https://api.scryfall.com/cards/named?exact=Swamp&format=image"
+  },
+  "Eternal_Thirst": {
+    "label": "Eternal Thirst",
+    "image": "https://api.scryfall.com/cards/named?exact=Eternal+Thirst&format=image"
+  },
+  "Murder": {
+    "label": "Murder",
+    "image": "https://api.scryfall.com/cards/named?exact=Murder&format=image"
+  },
+  "Sengir_Vampire": {
+    "label": "Sengir Vampire",
+    "image": "https://api.scryfall.com/cards/named?exact=Sengir+Vampire&format=image"
+  },
+  "Skeleton_Archer": {
+    "label": "Skeleton Archer",
+    "image": "https://api.scryfall.com/cards/named?exact=Skeleton+Archer&format=image"
+  },
+  "Typhoid_Rats": {
+    "label": "Typhoid Rats",
+    "image": "https://api.scryfall.com/cards/named?exact=Typhoid+Rats&format=image"
+  },
+  "Cruel_Cut": {
+    "label": "Cruel Cut",
+    "image": "https://api.scryfall.com/cards/named?exact=Cruel+Cut&format=image"
+  },
+  "Soulhunter_Rakshasa": {
+    "label": "Soulhunter Rakshasa",
+    "image": "https://api.scryfall.com/cards/named?exact=Soulhunter+Rakshasa&format=image"
+  },
+  "Bad_Deal": {
+    "label": "Bad Deal",
+    "image": "https://api.scryfall.com/cards/named?exact=Bad+Deal&format=image"
+  },
+  "Nightmare": {
+    "label": "Nightmare",
+    "image": "https://api.scryfall.com/cards/named?exact=Nightmare&format=image"
+  },
+  "Savage_Gorger": {
+    "label": "Savage Gorger",
+    "image": "https://api.scryfall.com/cards/named?exact=Savage+Gorger&format=image"
+  },
+  "Sanitarium_Skeleton": {
+    "label": "Sanitarium Skeleton",
+    "image": "https://api.scryfall.com/cards/named?exact=Sanitarium+Skeleton&format=image"
+  },
+  "Vampire_Opportunist": {
+    "label": "Vampire Opportunist",
+    "image": "https://api.scryfall.com/cards/named?exact=Vampire+Opportunist&format=image"
+  },
+  "Compound_Fracture": {
+    "label": "Compound Fracture",
+    "image": "https://api.scryfall.com/cards/named?exact=Compound+Fracture&format=image"
+  },
+  "Demon_of_Loathing": {
+    "label": "Demon of Loathing",
+    "image": "https://api.scryfall.com/cards/named?exact=Demon+of+Loathing&format=image"
+  },
+  "Mardu_Outrider": {
+    "label": "Mardu Outrider",
+    "image": "https://api.scryfall.com/cards/named?exact=Mardu+Outrider&format=image"
+  },
+  "Malakir_Cullblade": {
+    "label": "Malakir Cullblade",
+    "image": "https://api.scryfall.com/cards/named?exact=Malakir+Cullblade&format=image"
+  },
+  "Unlikely_Aid": {
+    "label": "Unlikely Aid",
+    "image": "https://api.scryfall.com/cards/named?exact=Unlikely+Aid&format=image"
+  }
+}
