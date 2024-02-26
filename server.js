@@ -23,6 +23,7 @@ fastify.get("/:room_id", async (request, reply) => {
 
   try {
     const response = await fetch(url);
+    console.log(response)
     if (!response.ok) {
       // Handle response errors (e.g., 404 or 500)
       reply.code(response.status).send({ error: "Failed to fetch data" });
