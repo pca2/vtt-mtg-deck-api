@@ -11,7 +11,9 @@ fastify.get('/:greeting/:name', async (request, reply) => {
   // Access the 'name' parameter from the URL
   const { greeting, name } = request.params;
   // Respond with a personalized message
-  return { greeting: name };
+  let response = {};
+  response[greeting] = name;
+  return response;
 });
 
 
