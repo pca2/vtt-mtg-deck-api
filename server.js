@@ -8,6 +8,19 @@ fastify.get("/", async (request, reply) => {
   return { hello: "world" };
 });
 
+function removeDeckCards(obj, deckName) {
+  Object.keys(obj).forEach(key => {
+    const value = obj[key];
+    if (typeof value === 'object' && value !== null) {
+      if (value.deck === deckName && value.type === 'card') {
+        delete obj[key];
+      } else {
+        removeDeckCards(value);
+      }
+    }
+  });
+}
+
 
 // Declare a route to fetch JSON based on room_id
 fastify.get("/:room_id", async (request, reply) => {
@@ -22,8 +35,11 @@ fastify.get("/:room_id", async (request, reply) => {
       return;
     }
     const jsonData = await response.json();
-    const updatedDeck = JSON.parse(JSON.stringify(jsonData));
-    updatedDeck['playerDeck1']['cardTypes'] = cardTypes
+    const updatedRoom = JSON.parse(JSON.stringify(jsonData));
+    removeDeckCards(updatedRoom, 'playerDeck1')
+    updatedRoom['playerDeck1']['cardTypes'] = cardTypes
+    updatedRoom = {...updatedRoom, ...cards}
+    console.log(updatedRoom)
     
     // Send the JSON data as response
     return jsonData;
