@@ -1,20 +1,12 @@
 // Import Fastify
 const fastify = require("fastify")({ logger: true });
+const fetch = require('node-fetch');
 
 // Declare a route
 fastify.get("/", async (request, reply) => {
   return { hello: "world" };
 });
 
-// Declare a dynamic route
-fastify.get("/:greeting/:name", async (request, reply) => {
-  // Access the 'name' parameter from the URL
-  const { greeting, name } = request.params;
-  // Respond with a personalized message
-  let response = {};
-  response[greeting] = name;
-  return response;
-});
 
 // Declare a route to fetch JSON based on room_id
 fastify.get("/:room_id", async (request, reply) => {
@@ -23,13 +15,14 @@ fastify.get("/:room_id", async (request, reply) => {
 
   try {
     const response = await fetch(url);
-    console.log(response)
     if (!response.ok) {
       // Handle response errors (e.g., 404 or 500)
       reply.code(response.status).send({ error: "Failed to fetch data" });
       return;
     }
     const jsonData = await response.json();
+    const updatedDeck = JSON.parse(JSON.stringify(jsonData));
+    
     // Send the JSON data as response
     return jsonData;
   } catch (error) {
