@@ -1,6 +1,11 @@
 // Import Fastify
 const fastify = require("fastify")({ logger: true });
 const fetch = require('node-fetch');
+fastify.register(require('@fastify/cors'), { 
+  // Put your options here
+  origin: "*", // Allow all origins
+  methods: ["GET"], // Specify which methods to allow
+});
 const cardTypes = require('./cardTypes.json');
 const cards = require('./cards.json');
 import { fetchRoomData, updateRoomData } from "./vtt";
