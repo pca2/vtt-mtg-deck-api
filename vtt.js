@@ -19,5 +19,5 @@ export async function updateRoomData(roomId, updatedData) {
   if (!response.ok) {
     throw new Error('Failed to update data');
   }
-  return response.json();
+  return response.text();
 }
