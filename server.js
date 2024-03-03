@@ -1,7 +1,11 @@
 // Import Fastify
-const fastify = require("fastify")({ logger: true });
-const fetch = require('node-fetch');
-fastify.register(require('@fastify/cors'), { 
+import Fastify from 'fastify'
+const fastify = Fastify({
+  logger: true
+})
+import fetch from 'node-fetch';
+import cors from '@fastify/cors'
+fastify.register(cors, {
   // Put your options here
   origin: "*", // Allow all origins
   methods: ["GET"], // Specify which methods to allow
